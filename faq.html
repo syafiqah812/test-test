@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        .layout{
+            width: 600px;
+            margin: auto;
+        }
+        .accordion{
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: rgb(222, 184, 135);
+            border-radius: 10px;
+        }
+        .accordion__question p{
+            margin: 5px;
+            padding: 0;
+            font-family: Verdana;
+            font-size: 20px;
+        }
+        .accordion__answer p{
+            margin: 5px;
+            padding: 10px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(255, 255, 255);
+            background: rgb(188, 143, 143);
+            border-radius: 10px; 
+        }
+        .accordion:hover{
+            cursor: pointer;
+        }
+        .accordion__answer {
+            display: none;
+        } 
+        .accordion.active .accordion__answer {
+            display: block;
+        }
+<br>
+<br>
+    </style>
+</head>
+<body>
+    <h2 style="color:brown; text-align:center">FAQ'S</h2>
+    <div class="layout">
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>HOW LONG WILL IT TAKE TO RECEIVE THE PASTA? DO I HAVE TO BOOK A DELIVERY SLOT?</p>
+  
+            </div>
+            <div class="accordion__answer">
+                <p>No waiting online for a slot – we can still deliver incredibly fast:
+Food panda and Grab Food: your order will arrive in 1 working day if ordered before 3pm the prior day.
+Shopee: your order will arrive in 2-3 working days.
+</p>
+  
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>HOW WILL MY PASTA BE DELIVERED?</p>
+  
+            </div>
+            <div class="accordion__answer">
+                <p>
+                  Food Panda and Grab: your pasta will be delivered with our partners by our Food panda and Grab Food drivers. Our drivers will bring the package to your doorstep and ring your bell. If you have any special instructions for our drivers, please let us know when you are placing the order (in the message box).
+Shopee: your pasta will be delivered in insulated boxes with ice packs using a third-party courier.
+</p>
+
+          </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>CAN I ORDER OVER THE PHONE?</p>
+  
+            </div>
+            <div class="accordion__answer">
+                <p>
+                  You can certainly place your order over the phone. However, we encourage you to place your order through our online shop so that you can have an overview of all of the special promotions we may be running.
+                </p>
+
+               </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>HOW CAN I CANCEL MY ORDER?</p>
+  
+            </div>
+            <div class="accordion__answer">
+                <p>If you have placed a wrong order by mistake or you forgot to add some pasta, no worries! Contact us within 12 hours on 0119865713(Mon-Fri, 9am-4pm) or send us an email to info@pastasoul.com stating your order number and our customer service team will do its best to amend your order.</p>
+ 
+          </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>WHAT IS THE DELIVERY CHARGE AND HOW MUCH IT IS?</p>
+  
+            </div>
+            <div class="accordion__answer">
+                <p>The delivery charge covers the cost of packing and delivering the pasta to you. Delivery is free of charge with orders over RM30 (after any discount, promo or voucher that may be applied). If your order is below RM30 we will charge according to the place.</p>
+ 
+            </div>
+        </div>
+    </div>
+  
+    <script>
+        let answers=document.querySelectorAll(".accordion");
+        answers.forEach((event)=>{
+            event.addEventListener('click',()=>{
+                if(event.classList.contains("active")){
+                    event.classList.remove("active");
+                }
+                else{
+                    event.classList.add("active");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
